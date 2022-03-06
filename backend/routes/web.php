@@ -20,3 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//add関数(コメントをデータベースに保存する関数)登録
+Route::post('/add', 'HomeController@add')->name('add');
